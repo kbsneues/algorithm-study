@@ -1,32 +1,37 @@
 #include <stdio.h>
 
-int min4(int a, int b, int c, int d)
+int sumof(int a, int b)
 {
 
-    int min = a; // a의 값이 최솟값이라고 가정
+    int i, sum = 0;
 
-    if (min > b)
-        min = b;
-    if (min > c)
-        min = c;
-    if (min > d)
-        min = d;
+    if (a < b)
+    {
+        for (i = a; i <= b; i++)
+            sum += i;
+    }
 
-    return min;
+    else if (a > b)
+    {
+        for (i = a; i >= b; i--)
+            sum += i;
+    }
+
+    else
+        sum = a;
+
+    return sum;
 }
 
 int main()
 {
+    int a, b;
 
-    int a, b, c, d;
     printf("a의 값 : ");
     scanf("%d", &a);
     printf("b의 값 : ");
     scanf("%d", &b);
-    printf("c의 값 : ");
-    scanf("%d", &c);
-    printf("d의 값 : ");
-    scanf("%d", &d);
 
-    printf("min4(%d,%d,%d,%d) = %d\n", a, b, c, d, min4(a, b, c, d));
+    printf("%d 와 %d 의 사이의 값은 %d", a, b, sumof(a, b));
+    return 0;
 }
