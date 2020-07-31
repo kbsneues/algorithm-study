@@ -37,7 +37,7 @@ double aveof(const int a[], int n)
 int main()
 {
 
-    int *height; // 포인터 배열
+    int *height; // 포인터 배열 
     int n;       // 인원 수
 
     srand(time(NULL)); // 시간으로 난수의 seed을 초기화
