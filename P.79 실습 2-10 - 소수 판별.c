@@ -24,4 +24,4 @@ int main()
     printf("나눗셈을 실행한 횟수 : %lu\n", counter);
 
     return 0;
-}
+} 
