@@ -16,9 +16,9 @@ int bin_search(const int a[], int n, int key)
 
         if (a[pc] == key) // 검색 성공!!
             return pc;
-        else if (a[pc] < key)
+        else if (a[pc] < key) // 검색값이 한가운데의 인덱스의 값보다 클 때 
             pl = pc + 1;
-        else
+        else // 검색값이 한가운데의 인덱스의 값보다 작을 때
             pr = pc - 1;
 
     } while (pl <= pr);
